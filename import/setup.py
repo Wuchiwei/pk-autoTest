@@ -13,7 +13,7 @@ def setUp(self):    #開啟appium，載入app，3層
           desired_capabilities={
               'app': app,
               'platformName': 'iOS',
-              'platformVersion': '10.0',
+              'platformVersion': '10.3',
               'deviceName': 'iPhone 6',
           })
     sleep(1)
@@ -34,7 +34,7 @@ def setUp1(self):    #開啟appium，載入app，2層
           desired_capabilities={
               'app': app,
               'platformName': 'iOS',
-              'platformVersion': '10.0',
+              'platformVersion': '10.3',
               'deviceName': 'iPhone 6',
           })
     sleep(1)
@@ -55,7 +55,7 @@ def setUp2(self):    #開啟appium，載入app，4層
           desired_capabilities={
               'app': app,
               'platformName': 'iOS',
-              'platformVersion': '10.0',
+              'platformVersion': '10.3',
               'deviceName': 'iPhone 6',
           })
     sleep(1)
