@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
+
 """
 Simple iOS tests, showing accessing elements and getting/setting text from them.
 """
 import unittest
 import os
 import sys
-sys.path.append("../../../../../import")
+sys.path.append("../../../../import")
 import setup
 import element
 from random import randint
