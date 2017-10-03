@@ -50,6 +50,23 @@ def edit_info(self): #編輯個人資料頁面元件
     self.ch_mail = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[5]/XCUIElementTypeTextField[1]')
     self.ch_phone = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[6]/XCUIElementTypeStaticText[1]')
 
+def anchor_info(self): #主播帳號個人頁面元件
+    self.anchor_info_out = self.driver.find_element_by_accessibility_id('登出')  #登出
+    self.anchor_info_page = self.driver.find_element_by_accessibility_id('個人資訊頁管理')
+    self.anchor_info_report = self.driver.find_element_by_accessibility_id('收益報表')
+    self.anchor_info_redlist = self.driver.find_element_by_accessibility_id('黑名單 / 紅名單')
+    self.anchor_info_rank = self.driver.find_element_by_accessibility_id('送禮及競猜排行榜')
+    self.anchor_info_otherset = self.driver.find_element_by_accessibility_id('其他設定')
+
+def edit_anchor_info(self):#主播帳號編輯個人頁面
+    self.edit_anchor_info_set = self.driver.find_element_by_accessibility_id('儲存')
+    self.edit_anchor_info_cancel = self.driver.find_element_by_accessibility_id('取消')
+    self.edit_anchor_info_chphoto = self.driver.find_element_by_accessibility_id('更換大頭照')
+    self.edit_anchor_info_chpasswd = self.driver.find_element_by_accessibility_id('變更密碼')
+    self.edit_anchor_info_nickname = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeTextField[1]')
+    self.edit_anchor_info_birthday = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[4]/XCUIElementTypeTextField[1]')
+    self.edit_anchor_info_introducte = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[5]/XCUIElementTypeTextView[1]')
+
 def go_store(self): #我要儲值頁面元件
     self.store_title = self.driver.find_element_by_accessibility_id('儲值中心')
     self.store_back = self.driver.find_element_by_accessibility_id('icon nav back white')
