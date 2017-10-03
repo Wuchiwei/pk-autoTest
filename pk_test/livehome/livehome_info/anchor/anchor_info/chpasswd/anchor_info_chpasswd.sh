@@ -10,5 +10,4 @@ python anchor_chpasswd_case6.py
 python anchor_chpasswd_case7.py
 python anchor_chpasswd_case8.py
 python anchor_chpasswd_case9.py
-python anchor_chpasswd_case10.py
 python anchor_chpasswd_reset.py 

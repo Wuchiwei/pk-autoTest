@@ -31,6 +31,7 @@ class SimpleIOSTests(unittest.TestCase):
         self.edit_anchor_info_chpasswd_page_passwd.send_keys('22222222')
         self.edit_anchor_info_chpasswd_page_newpasswd.send_keys('11111111')
         self.edit_anchor_info_chpasswd_page_define.click()
+        self.driver.find_element_by_accessibility_id('Done').click()
         element.edit_anchor_info_chpasswd_page(self)
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)

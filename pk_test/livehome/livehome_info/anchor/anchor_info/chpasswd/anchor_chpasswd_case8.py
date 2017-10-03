@@ -29,7 +29,7 @@ class SimpleIOSTests(unittest.TestCase):
         sleep(1)
         element.edit_anchor_info_chpasswd_page(self)
         self.edit_anchor_info_chpasswd_page_passwd.send_keys('11111111')
-        self.edit_anchor_info_chpasswd_page_newpasswd.send_keys('jdtytykju')
+        self.edit_anchor_info_chpasswd_page_newpasswd.send_keys('11111111')
         self.edit_anchor_info_chpasswd_page_define.click()
         element.edit_anchor_info_chpasswd_page(self)
 if __name__ == '__main__':

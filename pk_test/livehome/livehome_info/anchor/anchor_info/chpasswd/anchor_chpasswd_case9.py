@@ -29,9 +29,11 @@ class SimpleIOSTests(unittest.TestCase):
         sleep(1)
         element.edit_anchor_info_chpasswd_page(self)
         self.edit_anchor_info_chpasswd_page_passwd.send_keys('11111111')
-        self.edit_anchor_info_chpasswd_page_newpasswd.send_keys('11111111')
+        self.edit_anchor_info_chpasswd_page_newpasswd.send_keys('111111111')
         self.edit_anchor_info_chpasswd_page_define.click()
-        element.edit_anchor_info_chpasswd_page(self)
+        self.driver.find_element_by_accessibility_id('Done').click()
+        sleep(1)
+        element.login_mode_element(self)
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)
     unittest.TextTestRunner(verbosity=2).run(suite)

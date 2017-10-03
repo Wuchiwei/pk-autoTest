@@ -67,6 +67,10 @@ def edit_anchor_info(self):#主播帳號編輯個人頁面
     self.edit_anchor_info_birthday = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[4]/XCUIElementTypeTextField[1]')
     self.edit_anchor_info_introducte = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[5]/XCUIElementTypeTextView[1]')
 
+def edit_anchor_info_chpasswd_page(self):#主播變更密碼頁面
+    self.edit_anchor_info_chpasswd_page_passwd = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[1]')
+    self.edit_anchor_info_chpasswd_page_newpasswd = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[2]')
+    self.edit_anchor_info_chpasswd_page_define = self.driver.find_element_by_accessibility_id('確定')
 def go_store(self): #我要儲值頁面元件
     self.store_title = self.driver.find_element_by_accessibility_id('儲值中心')
     self.store_back = self.driver.find_element_by_accessibility_id('icon nav back white')
