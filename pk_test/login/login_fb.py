@@ -15,7 +15,7 @@ from time import sleep
 class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
-        setup.setUp1(self)
+        setup.load_for2(self)
         element.login_mode_element(self)
 
     def test_login_fb(self):

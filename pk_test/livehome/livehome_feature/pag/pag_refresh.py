@@ -15,8 +15,8 @@ from time import sleep
 class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
-        setup.setUp2(self)
-        setup.ck_login(self)
+        setup.load_for4(self)
+        setup.ck_login_ordinary(self)
         element.livehome_element(self)
 
     def test_page_refresh_case2(self): #刷新頁面

@@ -3,7 +3,7 @@
 import unittest
 import os
 import sys
-sys.path.append("../../../../../import")
+sys.path.append("../../../../../../import")
 import setup
 import element
 from random import randint
@@ -14,7 +14,7 @@ class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
         # set up appium
-        setup.setUp3(self)
+        setup.load_for6(self)
         sleep(1)
 
     def test_sign_out(self):
@@ -27,6 +27,14 @@ class SimpleIOSTests(unittest.TestCase):
             sleep(2)
         except:
             pass
+
+        try:
+            element.anchor_info(self)
+            self.sign_out_butten.click()
+            sleep(2)
+        except:
+            pass
+
         element.login_mode_element(self)
 
 if __name__ == '__main__':
