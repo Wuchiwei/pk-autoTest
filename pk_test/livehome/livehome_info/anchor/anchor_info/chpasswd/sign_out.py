@@ -14,7 +14,7 @@ class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
         # set up appium
-        setup.setUp4(self)
+        setup.load_for6(self)
         sleep(1)
 
     def test_sign_out(self):

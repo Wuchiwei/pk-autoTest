@@ -5,29 +5,7 @@ from random import randint
 from appium import webdriver
 from time import sleep
 
-
-def setUp(self):    #開啟appium，載入app，3層
-    app = os.path.abspath('../../../app/PKLive-InHouse.app')
-    self.driver = webdriver.Remote(
-          command_executor='http://127.0.0.1:4723/wd/hub',
-          desired_capabilities={
-              'app': app,
-              'platformName': 'iOS',
-              'platformVersion': '10.3',
-              'deviceName': 'iPhone 6',
-          })
-    sleep(1)
-    try:
-        Confirm_butten = self.driver.find_element_by_accessibility_id('Confirm')
-        Confirm_butten.click()
-        massage_allow = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[6]/XCUIElementTypeOther[2]/XCUIElementTypeAlert[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]')
-        massage_allow.click()
-        sleep(1)
-    except:
-        pass
-
-
-def setUp1(self):    #開啟appium，載入app，2層
+def load_for2(self):    #開啟appium，載入app，2層
     app = os.path.abspath('../../app/PKLive-InHouse.app')
     self.driver = webdriver.Remote(
           command_executor='http://127.0.0.1:4723/wd/hub',
@@ -47,8 +25,27 @@ def setUp1(self):    #開啟appium，載入app，2層
     except:
         pass
 
+def load_for3(self):    #開啟appium，載入app，3層
+    app = os.path.abspath('../../../app/PKLive-InHouse.app')
+    self.driver = webdriver.Remote(
+          command_executor='http://127.0.0.1:4723/wd/hub',
+          desired_capabilities={
+              'app': app,
+              'platformName': 'iOS',
+              'platformVersion': '10.3',
+              'deviceName': 'iPhone 6',
+          })
+    sleep(1)
+    try:
+        Confirm_butten = self.driver.find_element_by_accessibility_id('Confirm')
+        Confirm_butten.click()
+        massage_allow = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[6]/XCUIElementTypeOther[2]/XCUIElementTypeAlert[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]')
+        massage_allow.click()
+        sleep(1)
+    except:
+        pass
 
-def setUp2(self):    #開啟appium，載入app，4層
+def load_for4(self):    #開啟appium，載入app，4層
     app = os.path.abspath('../../../../app/PKLive-InHouse.app')
     self.driver = webdriver.Remote(
           command_executor='http://127.0.0.1:4723/wd/hub',
@@ -68,8 +65,7 @@ def setUp2(self):    #開啟appium，載入app，4層
     except:
         pass
 
-
-def setUp3(self):    #開啟appium，載入app，5層
+def load_for5(self):    #開啟appium，載入app，5層
     app = os.path.abspath('../../../../../app/PKLive-InHouse.app')
     self.driver = webdriver.Remote(
           command_executor='http://127.0.0.1:4723/wd/hub',
@@ -89,7 +85,7 @@ def setUp3(self):    #開啟appium，載入app，5層
     except:
         pass
 
-def setUp4(self):    #開啟appium，載入app，6層
+def load_for6(self):    #開啟appium，載入app，6層
     app = os.path.abspath('../../../../../../app/PKLive-InHouse.app')
     self.driver = webdriver.Remote(
           command_executor='http://127.0.0.1:4723/wd/hub',
@@ -109,8 +105,7 @@ def setUp4(self):    #開啟appium，載入app，6層
     except:
         pass
 
-
-def ck_login(self):   #檢查是否已經登入-普通帳號
+def ck_login_ordinary(self):   #檢查是否已經登入-普通帳號
     try:
         icon_phone_butten = self.driver.find_element_by_accessibility_id('icon phone')
         icon_phone_butten.click()
@@ -130,8 +125,7 @@ def ck_login(self):   #檢查是否已經登入-普通帳號
     except:
         pass
 
-
-def ck_login_1(self):   #檢查是否已經登入-主播帳號
+def ck_login_anchor(self):   #檢查是否已經登入-主播帳號
     try:
         icon_phone_butten = self.driver.find_element_by_accessibility_id('icon phone')
         icon_phone_butten.click()

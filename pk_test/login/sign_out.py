@@ -4,6 +4,10 @@ Simple iOS tests, showing accessing elements and getting/setting text from them.
 """
 import unittest
 import os
+import sys
+sys.path.append("../../import")
+import setup
+import element
 from random import randint
 from appium import webdriver
 from time import sleep
@@ -12,25 +16,8 @@ class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
         # set up appium
-        app = os.path.abspath('../../app/PKLive-InHouse.app')
-        self.driver = webdriver.Remote(
-            command_executor='http://127.0.0.1:4723/wd/hub',
-            desired_capabilities={
-                'app': app,
-                'platformName': 'iOS',
-                'platformVersion': '10.3',
-                'deviceName': 'iPhone 6',
-            })
-        try:
-            Confirm_butten = self.driver.find_element_by_accessibility_id('Confirm')
-            Confirm_butten.click()
-            massage_allow = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[6]/XCUIElementTypeOther[2]/XCUIElementTypeAlert[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]')
-            massage_allow.click()
-            sleep(1)
-        except:
-            pass
+        setup.load_for2(self)
         sleep(1)
-
         try:
             self.info_butten = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTabBar[1]/XCUIElementTypeButton[4]')
             self.info_butten.click()

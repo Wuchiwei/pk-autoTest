@@ -14,11 +14,11 @@ class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
         # set up appium
-        setup.setUp4(self)
+        setup.load_for6(self)
         sleep(1)
 
     def test_anchor_login(self):
-        setup.ck_login_1(self)
+        setup.ck_login_anchor(self)
         sleep(2)
         element.livehome_element(self)
 

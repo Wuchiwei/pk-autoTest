@@ -14,7 +14,7 @@ class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
         # set up appium
-        setup.setUp4(self)
+        setup.load_for6(self)
         sleep(1)
 
     def test_anchor_chpasswd_case5(self):#原先密碼輸入錯誤與新密碼空白

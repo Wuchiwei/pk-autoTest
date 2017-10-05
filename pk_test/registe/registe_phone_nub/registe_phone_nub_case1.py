@@ -15,7 +15,7 @@ from time import sleep
 class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
-        setup.setUp(self)
+        setup.load_for3(self)
         element.login_mode_element(self)
         self.icon_phone_butten.click()
         sleep(1)
@@ -23,7 +23,7 @@ class SimpleIOSTests(unittest.TestCase):
         self.go_registe_butten.click()
         sleep(1)
 
-    def test_userid_case1(self):
+    def test_phone_nub_case1(self):
         element.registe_element(self)
         self.user_id = 'dfgfhymjk'
         self.passwd = 'asdfgh'
