@@ -113,3 +113,11 @@ def anchor_info_report_dateform(self):#主播收益報表日期表單
     self.anchor_info_report_date1 = self.driver.find_element_by_xpath('//XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]')
     self.anchor_info_report_date2 = self.driver.find_element_by_xpath('//XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[2]')
     self.anchor_info_report_date3 = self.driver.find_element_by_xpath('//XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[3]')
+
+def anchor_info_otherset(self): #主播其他設定
+    self.anchor_info_otherset_problem = self.driver.find_element_by_accessibility_id('常見問題')
+    self.anchor_info_otherset_contact = self.driver.find_element_by_accessibility_id('聯絡我們')
+    self.anchor_info_otherset_service = self.driver.find_element_by_accessibility_id('服務條款')
+    self.anchor_info_otherset_rule = self.driver.find_element_by_accessibility_id('用戶規章')
+    self.anchor_info_otherset_privacy = self.driver.find_element_by_accessibility_id('隱私權保護政策')
+    self.anchor_info_otherset_review = self.driver.find_element_by_accessibility_id('給個好評吧')
