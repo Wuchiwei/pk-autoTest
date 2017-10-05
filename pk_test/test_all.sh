@@ -8,3 +8,10 @@ cd ..
 cd livehome
 sh livehome.sh
 cd ..
+
+cd ..
+cd import
+rm -rf ./*.pyc
+
+cd ..
+cd pk_test
