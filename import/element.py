@@ -12,7 +12,7 @@ def login_mode_element(self): #選擇登入方式元件
 def login_phone_element(self): #普通登入頁面元件
     self.user_id_test = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]')
     self.user_passwd_test = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[1]')
-    self.login_butten = self.driver.find_element_by_accessibility_id('Login')
+    self.login_butten = self.driver.find_element_by_accessibility_id('登入')
     self.go_registe_butten = self.driver.find_element_by_accessibility_id('前往註冊')
 
 def registe_element(self): #註冊頁面元件
