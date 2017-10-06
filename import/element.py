@@ -50,27 +50,6 @@ def edit_info(self): #編輯個人資料頁面元件
     self.ch_mail = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[5]/XCUIElementTypeTextField[1]')
     self.ch_phone = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[6]/XCUIElementTypeStaticText[1]')
 
-def anchor_info(self): #主播帳號個人頁面元件
-    self.anchor_info_out = self.driver.find_element_by_accessibility_id('登出')  #登出
-    self.anchor_info_page = self.driver.find_element_by_accessibility_id('個人資訊頁管理')
-    self.anchor_info_report = self.driver.find_element_by_accessibility_id('收益報表')
-    self.anchor_info_redlist = self.driver.find_element_by_accessibility_id('黑名單 / 紅名單')
-    self.anchor_info_rank = self.driver.find_element_by_accessibility_id('送禮及競猜排行榜')
-    self.anchor_info_otherset = self.driver.find_element_by_accessibility_id('其他設定')
-
-def edit_anchor_info(self):#主播帳號編輯個人頁面
-    self.edit_anchor_info_set = self.driver.find_element_by_accessibility_id('儲存')
-    self.edit_anchor_info_cancel = self.driver.find_element_by_accessibility_id('取消')
-    self.edit_anchor_info_chphoto = self.driver.find_element_by_accessibility_id('更換大頭照')
-    self.edit_anchor_info_chpasswd = self.driver.find_element_by_accessibility_id('變更密碼')
-    self.edit_anchor_info_nickname = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeTextField[1]')
-    self.edit_anchor_info_birthday = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[4]/XCUIElementTypeTextField[1]')
-    self.edit_anchor_info_introducte = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[5]/XCUIElementTypeTextView[1]')
-
-def edit_anchor_info_chpasswd_page(self):#主播變更密碼頁面
-    self.edit_anchor_info_chpasswd_page_passwd = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[1]')
-    self.edit_anchor_info_chpasswd_page_newpasswd = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[2]')
-    self.edit_anchor_info_chpasswd_page_define = self.driver.find_element_by_accessibility_id('確定')
 def go_store(self): #我要儲值頁面元件
     self.store_title = self.driver.find_element_by_accessibility_id('儲值中心')
     self.store_back = self.driver.find_element_by_accessibility_id('icon nav back white')
@@ -98,3 +77,47 @@ def other_set(self): #我的追蹤頁面元件
     self.rule_butten = self.driver.find_element_by_accessibility_id('用戶規章')
     self.privacy_butten = self.driver.find_element_by_accessibility_id('隱私權保護政策')
     self.evaluate_butten = self.driver.find_element_by_accessibility_id('給個好評吧')
+
+#---------------------------------主播-----------------------------------------------------
+
+def anchor_info(self): #主播帳號個人頁面元件
+    self.anchor_info_out = self.driver.find_element_by_accessibility_id('登出')  #登出
+    self.anchor_info_nickname = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeStaticText[1]')
+    self.anchor_info_page = self.driver.find_element_by_accessibility_id('個人資訊頁管理')
+    self.anchor_info_report = self.driver.find_element_by_accessibility_id('收益報表')
+    self.anchor_info_redlist = self.driver.find_element_by_accessibility_id('黑名單 / 紅名單')
+    self.anchor_info_rank = self.driver.find_element_by_accessibility_id('送禮及競猜排行榜')
+    self.anchor_info_otherset = self.driver.find_element_by_accessibility_id('其他設定')
+
+def edit_anchor_info(self):#主播帳號編輯個人資訊頁管理
+    self.edit_anchor_info_set = self.driver.find_element_by_accessibility_id('儲存')
+    self.edit_anchor_info_cancel = self.driver.find_element_by_accessibility_id('取消')
+    self.edit_anchor_info_chphoto = self.driver.find_element_by_accessibility_id('更換大頭照')
+    self.edit_anchor_info_chpasswd = self.driver.find_element_by_accessibility_id('變更密碼')
+    self.edit_anchor_info_nickname = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeTextField[1]')
+    self.edit_anchor_info_birthday = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[4]/XCUIElementTypeTextField[1]')
+    self.edit_anchor_info_introducte = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[5]/XCUIElementTypeTextView[1]')
+
+def edit_anchor_info_chpasswd_page(self):#主播變更密碼頁面
+    self.edit_anchor_info_chpasswd_page_passwd = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[1]')
+    self.edit_anchor_info_chpasswd_page_newpasswd = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[2]')
+    self.edit_anchor_info_chpasswd_page_define = self.driver.find_element_by_accessibility_id('確定')
+
+def anchor_info_report(self):#主播收益報表頁面
+    self.anchor_info_report_title = self.driver.find_element_by_accessibility_id('收益報表 ▼')
+    self.anchor_info_report_day = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeStaticText[1]')
+    self.anchor_info_report_giftincome = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[1]')
+    self.anchor_info_report_pkincome = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]')
+    self.anchor_info_report_back = self.driver.find_element_by_accessibility_id('Back')
+def anchor_info_report_dateform(self):#主播收益報表日期表單
+    self.anchor_info_report_date1 = self.driver.find_element_by_xpath('//XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]')
+    self.anchor_info_report_date2 = self.driver.find_element_by_xpath('//XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[2]')
+    self.anchor_info_report_date3 = self.driver.find_element_by_xpath('//XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[3]')
+
+def anchor_info_otherset(self): #主播其他設定
+    self.anchor_info_otherset_problem = self.driver.find_element_by_accessibility_id('常見問題')
+    self.anchor_info_otherset_contact = self.driver.find_element_by_accessibility_id('聯絡我們')
+    self.anchor_info_otherset_service = self.driver.find_element_by_accessibility_id('服務條款')
+    self.anchor_info_otherset_rule = self.driver.find_element_by_accessibility_id('用戶規章')
+    self.anchor_info_otherset_privacy = self.driver.find_element_by_accessibility_id('隱私權保護政策')
+    self.anchor_info_otherset_review = self.driver.find_element_by_accessibility_id('給個好評吧')
