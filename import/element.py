@@ -29,6 +29,12 @@ def livehome_element(self): #PK直播大廳元件
     self.live = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTabBar[1]/XCUIElementTypeButton[3]')
     self.info = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTabBar[1]/XCUIElementTypeButton[4]')
 
+def livehome_live(self):  #開啟直播頁面元件
+    self.live_message = self.driver.find_element_by_accessibility_id('開啟直播')
+    self.live_connect = self.driver.find_element_by_accessibility_id('聯絡客服，我要當主播')
+    self.live_signout = self.driver.find_element_by_accessibility_id('登出')
+    self.live_next = self.driver.find_element_by_accessibility_id('下次再說囉！')
+
 def livehome_info(self):  #個人資料頁面元件
     self.sign_out_butten = self.driver.find_element_by_accessibility_id('登出')
     self.profile_edit_butten = self.driver.find_element_by_accessibility_id('icon profile edit')
@@ -121,3 +127,22 @@ def anchor_info_otherset(self): #主播其他設定
     self.anchor_info_otherset_rule = self.driver.find_element_by_accessibility_id('用戶規章')
     self.anchor_info_otherset_privacy = self.driver.find_element_by_accessibility_id('隱私權保護政策')
     self.anchor_info_otherset_review = self.driver.find_element_by_accessibility_id('給個好評吧')
+
+def anchor_live(self): #主播開播頁面
+    self.anchor_live_title = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]')
+    self.anchor_live_rank = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]/XCUIElementTypeTextField[1]')
+    self.anchor_live_game = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]/XCUIElementTypeButton[1]')
+    self.anchor_live_money = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]')
+    self.anchor_live_open = self.driver.find_element_by_accessibility_id('開始直播')
+
+def anchor_live_game(self): #主播開播頁面的預測遊戲
+    self.anchor_live_game_clean = self.driver.find_element_by_accessibility_id('清除')
+    self.anchor_live_game_title = self.driver.find_element_by_accessibility_id('遊戲分類')
+    self.anchor_live_game_stop = self.driver.find_element_by_accessibility_id('Stop')
+    self.anchor_live_game_list = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[1]')
+
+def anchor_live_open(self): #主播開啟直播後畫面
+    self.anchor_live_open_message = self.driver.find_element_by_accessibility_id('icon message')
+    self.anchor_live_open_switchcam = self.driver.find_element_by_accessibility_id('icon switchcam')
+    self.anchor_live_open_gamepanel = self.driver.find_element_by_accessibility_id('icon game panel')
+    self.anchor_live_open_share = self.driver.find_element_by_accessibility_id('icon share')
