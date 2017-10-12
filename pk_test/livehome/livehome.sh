@@ -8,3 +8,6 @@ cd ..
 cd livehome_info
 sh livehome_info.sh
 cd ..
+cd livehome_live
+sh livehome_live.sh
+cd ..

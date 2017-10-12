@@ -29,6 +29,24 @@ def livehome_element(self): #PK直播大廳元件
     self.live = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTabBar[1]/XCUIElementTypeButton[3]')
     self.info = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTabBar[1]/XCUIElementTypeButton[4]')
 
+def livehome_game(self):
+    self.livehome_game_title = self.driver.find_element_by_accessibility_id('遊戲大廳')
+
+    self.livehome_game_ad = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[1]')
+
+    self.livehome_game_electronic = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeCollectionView[1]')
+    #game_electronic -->  self.driver.tap([(100, 330)])
+    self.livehome_game_popular = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeOther[1]')
+    #game_popular --> self.driver.tap([(140, 535)])
+
+def livehome_game_popular(self):
+    self.livehome_game_popular_back = self.driver.find_element_by_accessibility_id('icon nav back white')
+    self.livehome_game_popular_pk = self.driver.find_element_by_accessibility_id('PK !')
+    self.livehome_game_popula_coin = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[5]/XCUIElementTypeStaticText[1]')
+    self.livehome_game_popula_diamonds = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[5]/XCUIElementTypeStaticText[2]')
+    self.livehome_game_popula_store = self.driver.find_element_by_accessibility_id('儲值')
+    self.livehome_game_popula_pkrecord = self.driver.find_element_by_accessibility_id('PK紀錄')
+
 def livehome_live(self):  #開啟直播頁面元件
     self.live_message = self.driver.find_element_by_accessibility_id('開啟直播')
     self.live_connect = self.driver.find_element_by_accessibility_id('聯絡客服，我要當主播')
