@@ -31,9 +31,7 @@ def livehome_element(self): #PK直播大廳元件
 
 def livehome_game(self):
     self.livehome_game_title = self.driver.find_element_by_accessibility_id('遊戲大廳')
-
     self.livehome_game_ad = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[1]')
-
     self.livehome_game_electronic = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeCollectionView[1]')
     #game_electronic -->  self.driver.tap([(100, 330)])
     self.livehome_game_popular = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeOther[1]')
@@ -55,6 +53,8 @@ def livehome_live(self):  #開啟直播頁面元件
 
 def livehome_info(self):  #個人資料頁面元件
     self.sign_out_butten = self.driver.find_element_by_accessibility_id('登出')
+    self.livehome_info_diamonds = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeStaticText[1]')
+    self.livehome_info_coin = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeStaticText[5]')
     self.profile_edit_butten = self.driver.find_element_by_accessibility_id('icon profile edit')
     self.nickname = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeStaticText[2]')
     self.go_store = self.driver.find_element_by_accessibility_id('我要儲值')
