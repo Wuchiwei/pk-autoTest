@@ -3,7 +3,7 @@
 import unittest
 import os
 import sys
-sys.path.append("../../../../../../import")
+sys.path.append("../../../../import")
 import setup
 import element
 from random import randint
@@ -14,23 +14,18 @@ class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
         # set up appium
-        setup.load_for6(self)
+        setup.load_for4(self)
         setup.ck_login_anchor(self)
         sleep(2)
 
-    def test_ch_birthday_case(self):#原先密碼與新密碼皆未輸入
+    def test_live_anchor_case1(self):
         element.livehome_element(self)
-        self.info.click()
+        self.live.click()
         sleep(1)
-        element.anchor_info(self)
-        self.anchor_info_page.click()
-        sleep(1)
-        element.edit_anchor_info(self)
-        self.edit_anchor_info_birthday.click()
-        self.driver.swipe(210.5,510.5,210.5,600)
-        self.edit_anchor_info_set.click()
-        sleep(2)
-        element.anchor_info(self)
+        element.anchor_live(self)
+        self.anchor_live_open.click()
+        element.anchor_live(self)
+
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)
     unittest.TextTestRunner(verbosity=2).run(suite)

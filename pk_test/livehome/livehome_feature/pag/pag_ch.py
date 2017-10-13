@@ -17,10 +17,11 @@ class SimpleIOSTests(unittest.TestCase):
     def setUp(self):
         setup.load_for4(self)
         setup.ck_login_ordinary(self)
-        element.livehome_element(self)
+        sleep(2)
+
 
     def test_page_ch_case1(self):  #頁面切換
-
+        element.livehome_element(self)
         self.assertEqual(u'PK直播', self.pk_title.get_attribute(u'name'))
         self.game.click()
         sleep(1)
