@@ -16,7 +16,7 @@ class SimpleIOSTests(unittest.TestCase):
         # set up appium
         setup.load_for4(self)
         setup.ck_login_ordinary(self)
-        sleep(1)
+        sleep(2)
 
     def test_game_ordinary_store_case(self):
         element.livehome_element(self)

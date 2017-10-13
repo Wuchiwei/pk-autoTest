@@ -15,7 +15,7 @@ class SimpleIOSTests(unittest.TestCase):
     def setUp(self):
         # set up appium
         setup.load_for6(self)
-        sleep(1)
+        sleep(2)
 
     def test_anchor_chpasswd_case9(self):#原先密碼輸入錯誤與新密碼空白
         element.livehome_element(self)
@@ -32,7 +32,7 @@ class SimpleIOSTests(unittest.TestCase):
         self.edit_anchor_info_chpasswd_page_newpasswd.send_keys('111111111')
         self.edit_anchor_info_chpasswd_page_define.click()
         self.driver.find_element_by_accessibility_id('Done').click()
-        sleep(1)
+        sleep(2)
         element.login_mode_element(self)
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)

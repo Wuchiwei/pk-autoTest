@@ -24,7 +24,7 @@ class SimpleIOSTests(unittest.TestCase):
         sleep(1)
         element.livehome_live(self)
         self.live_connect.click()
-        sleep(1)
+        sleep(2)
         self.driver.find_element_by_accessibility_id('聯絡我們')
 
 if __name__ == '__main__':

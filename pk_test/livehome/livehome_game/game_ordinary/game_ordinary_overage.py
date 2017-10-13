@@ -16,17 +16,17 @@ class SimpleIOSTests(unittest.TestCase):
         # set up appium
         setup.load_for4(self)
         setup.ck_login_ordinary(self)
-        sleep(1)
+        sleep(2)
 
     def test_game_ordinary_overage_case(self):
         element.livehome_element(self)
         self.game.click()
-        sleep(1)
+        sleep(2)
         element.livehome_game(self)
         self.driver.tap([(140, 535)])#self.livehome_game_popular.click()
         sleep(1)
         element.livehome_game_popular(self)
-        self.coin1 = int(self.livehome_game_popula_coin.get_attribute('value').replace(',','')) 
+        self.coin1 = int(self.livehome_game_popula_coin.get_attribute('value').replace(',',''))
         self.diamonds1 = int(self.livehome_game_popula_diamonds.get_attribute('value').replace(',',''))
         self.livehome_game_popular_back.click()
         sleep(1)

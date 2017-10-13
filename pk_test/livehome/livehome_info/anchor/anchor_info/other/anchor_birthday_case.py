@@ -16,7 +16,7 @@ class SimpleIOSTests(unittest.TestCase):
         # set up appium
         setup.load_for6(self)
         setup.ck_login_anchor(self)
-        sleep(1)
+        sleep(2)
 
     def test_ch_birthday_case(self):#原先密碼與新密碼皆未輸入
         element.livehome_element(self)
