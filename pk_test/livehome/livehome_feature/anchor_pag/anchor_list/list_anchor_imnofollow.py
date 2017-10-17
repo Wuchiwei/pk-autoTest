@@ -5,9 +5,11 @@ Simple iOS tests, showing accessing elements and getting/setting text from them.
 import unittest
 import os
 import sys
-sys.path.append("../../../../import")
+sys.path.append("../../../../../import")
 import setup
 import element
+sys.path.append("../function")
+import function
 from random import randint
 from appium import webdriver
 from time import sleep
@@ -15,14 +17,14 @@ from time import sleep
 class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
-        setup.load_for4(self)
+        # set up appium
+        setup.load_for5(self)
         setup.ck_login_ordinary(self)
-        element.livehome_element(self)
-    def test_page_ad_case2(self):  #進入廣告
-        self.driver.tap([(160, 130)])
-        sleep(1)
-        self.back = self.driver.find_element_by_accessibility_id('Back')
-        self.back.click()
+
+    def test_list_imnofollow_case2(self):  #粉絲數量變化
+        self.driver.swipe(190,590,0,-400)
+        self.driver.tap([(300, 570)])
+        function.imnofollow(self)
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)
