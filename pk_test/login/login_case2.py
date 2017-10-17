@@ -16,6 +16,7 @@ class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
         setup.load_for2(self)
+        setup.ck_signout(self)
         element.login_mode_element(self)
         self.icon_phone_butten.click()
         sleep(1)
@@ -28,7 +29,7 @@ class SimpleIOSTests(unittest.TestCase):
         self.user_id_test.send_keys(self.user_id)
         self.user_passwd_test.send_keys(self.user_passwd)
         self.login_butten.click()
-        sleep(1)
+        sleep(2)
         self.assertEqual('Login', self.login_butten.get_attribute('name'))
 
 if __name__ == '__main__':

@@ -8,6 +8,7 @@ import sys
 sys.path.append("../../../import")
 import setup
 import element
+import random
 from random import randint
 from appium import webdriver
 from time import sleep
@@ -24,12 +25,15 @@ class SimpleIOSTests(unittest.TestCase):
         self.go_registe_butten.click()
         sleep(1)
 
-    def test_passwd_case2(self):
+    def test_phone_nub_case5(self):
         element.registe_element(self)
-        self.user_id = 'dfgfhymjk'
-        self.passwd = '       '
+        self.user_id = ''
+        for i in range(8):
+            rnd = random.choice('abcdefghijklmnopqr')
+            self.user_id += rnd
+        self.passwd = 'asdfgh'
         self.agn_passwd = 'asdfgh'
-        self.phone_nub = '0916113897'
+        self.phone_nub = '011111111'
 
         self.user_id_test.send_keys(self.user_id)
         self.passwd_test.send_keys(self.passwd)
@@ -39,7 +43,7 @@ class SimpleIOSTests(unittest.TestCase):
         self.done_butten = self.driver.find_element_by_accessibility_id('Toolbar Done Button')
         self.done_butten.click()
         self.registe_butten.click()
-        sleep(1)
+        sleep(2)
         self.assertEqual(u'註冊', self.registe_butten.get_attribute(u'name'))
 
 if __name__ == '__main__':
