@@ -6,6 +6,8 @@ import sys
 sys.path.append("../../../../import")
 import setup
 import element
+sys.path.append("../function_game")
+import function_game
 from random import randint
 from appium import webdriver
 from time import sleep
@@ -15,20 +17,21 @@ class SimpleIOSTests(unittest.TestCase):
     def setUp(self):
         # set up appium
         setup.load_for4(self)
-        setup.ck_login_anchor(self)
-        sleep(1)
+        setup.ck_login_ordinary(self)
+        sleep(2)
 
-    def test_game_anchor_store_case(self):
+    def test_sort_game_ordinary_store_case(self):
         element.livehome_element(self)
         self.game.click()
-        sleep(1)
+        sleep(2)
         element.livehome_game(self)
-        self.driver.tap([(140, 535)])#self.livehome_game_popular.click()
+        self.driver.swipe(190,590,0,-530)
+        self.driver.tap([(57, 480)])
+        sleep(1)
+        self.driver.tap([(57, 480)])
         sleep(1)
         element.livehome_game_popular(self)
-        self.livehome_game_popula_store.click()
-        sleep(1)
-        self.driver.find_element_by_accessibility_id('主播規範')
+        function_game.game_ordinary_store(self)
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)

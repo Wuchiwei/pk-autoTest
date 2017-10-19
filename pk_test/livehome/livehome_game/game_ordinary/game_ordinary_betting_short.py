@@ -6,6 +6,8 @@ import sys
 sys.path.append("../../../../import")
 import setup
 import element
+sys.path.append("../function_game")
+import function_game
 from random import randint
 from appium import webdriver
 from time import sleep
@@ -21,21 +23,12 @@ class SimpleIOSTests(unittest.TestCase):
     def test_game_ordinary_betting_short_case(self):
         element.livehome_element(self)
         self.game.click()
-        sleep(1)
+        sleep(2)
         element.livehome_game(self)
         self.driver.tap([(140, 535)])#self.livehome_game_popular.click()
         sleep(1)
         element.livehome_game_popular(self)
-        self.coin1 = int(self.livehome_game_popula_coin.get_attribute('value').replace(',',''))
-        self.diamonds1 = int(self.livehome_game_popula_diamonds.get_attribute('value').replace(',',''))
-        self.livehome_game_popular_pk.click()
-        self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[5]/XCUIElementTypeTextField[1]').send_keys(200)
-        self.driver.find_element_by_accessibility_id('確定').click()
-        sleep(1)
-        self.coin2 = int(self.livehome_game_popula_coin.get_attribute('value').replace(',',''))
-        self.diamonds2 = int(self.livehome_game_popula_diamonds.get_attribute('value').replace(',',''))
-        self.assertEqual(self.diamonds1, self.diamonds2)
-        self.assertEqual(self.coin1, self.coin2)
+        function_game.game_ordinary_betting_short(self)
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)
