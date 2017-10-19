@@ -145,6 +145,9 @@ def anchor_info_otherset(self): #主播其他設定
     self.anchor_info_otherset_rule = self.driver.find_element_by_accessibility_id('用戶規章')
     self.anchor_info_otherset_privacy = self.driver.find_element_by_accessibility_id('隱私權保護政策')
     self.anchor_info_otherset_review = self.driver.find_element_by_accessibility_id('給個好評吧')
+    self.anchor_info_otherset_morelogin = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[1]/XCUIElementTypeSwitch[1]')
+    self.anchor_info_otherset_notice = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeSwitch[1]')
+
 
 def anchor_live(self): #主播開播頁面
     self.anchor_live_title = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]')
