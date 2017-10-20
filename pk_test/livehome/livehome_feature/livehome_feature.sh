@@ -2,6 +2,6 @@
 cd pag
 sh pag.sh
 cd ..
-cd popular_anchor
-sh popular_anchor.sh
+cd anchor_pag
+sh anchor_pag.sh
 cd ..
