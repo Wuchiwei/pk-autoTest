@@ -10,9 +10,9 @@ def login_mode_element(self): #選擇登入方式元件
     self.icon_phone_butten = self.driver.find_element_by_accessibility_id('icon phone')
 
 def login_phone_element(self): #普通登入頁面元件
-    self.user_id_test = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]')
-    self.user_passwd_test = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[1]')
-    self.login_butten = self.driver.find_element_by_accessibility_id('登入')
+    self.user_id_test = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]')
+    self.user_passwd_test = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[1]')
+    self.login_butten = self.driver.find_element_by_accessibility_id('Login')
     self.go_registe_butten = self.driver.find_element_by_accessibility_id('前往註冊')
 
 def registe_element(self): #註冊頁面元件
@@ -106,7 +106,7 @@ def other_set(self): #我的追蹤頁面元件
 
 def anchor_info(self): #主播帳號個人頁面元件
     self.anchor_info_out = self.driver.find_element_by_accessibility_id('登出')  #登出
-    self.anchor_info_nickname = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeStaticText[1]')
+    self.anchor_info_nickname = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeStaticText[1]')
     self.anchor_info_page = self.driver.find_element_by_accessibility_id('個人資訊頁管理')
     self.anchor_info_report = self.driver.find_element_by_accessibility_id('收益報表')
     self.anchor_info_redlist = self.driver.find_element_by_accessibility_id('黑名單 / 紅名單')
@@ -123,8 +123,8 @@ def edit_anchor_info(self):#主播帳號編輯個人資訊頁管理
     self.edit_anchor_info_introducte = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[5]/XCUIElementTypeTextView[1]')
 
 def edit_anchor_info_chpasswd_page(self):#主播變更密碼頁面
-    self.edit_anchor_info_chpasswd_page_passwd = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[1]')
-    self.edit_anchor_info_chpasswd_page_newpasswd = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[2]')
+    self.edit_anchor_info_chpasswd_page_passwd = self.driver.find_element_by_xpath('///XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[1]')
+    self.edit_anchor_info_chpasswd_page_newpasswd = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField[2]')
     self.edit_anchor_info_chpasswd_page_define = self.driver.find_element_by_accessibility_id('確定')
 
 def anchor_info_report(self):#主播收益報表頁面
@@ -145,6 +145,9 @@ def anchor_info_otherset(self): #主播其他設定
     self.anchor_info_otherset_rule = self.driver.find_element_by_accessibility_id('用戶規章')
     self.anchor_info_otherset_privacy = self.driver.find_element_by_accessibility_id('隱私權保護政策')
     self.anchor_info_otherset_review = self.driver.find_element_by_accessibility_id('給個好評吧')
+    self.anchor_info_otherset_morelogin = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[1]/XCUIElementTypeSwitch[1]')
+    self.anchor_info_otherset_notice = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeSwitch[1]')
+
 
 def anchor_live(self): #主播開播頁面
     self.anchor_live_title = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]')

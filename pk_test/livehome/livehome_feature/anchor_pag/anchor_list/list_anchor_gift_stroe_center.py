@@ -8,6 +8,8 @@ import sys
 sys.path.append("../../../../../import")
 import setup
 import element
+sys.path.append("../function")
+import function
 from random import randint
 from appium import webdriver
 from time import sleep
@@ -21,16 +23,10 @@ class SimpleIOSTests(unittest.TestCase):
 
     def test_popular_gift_stroe_center(self):  #進入儲值程序
 
-        self.driver.tap([(160, 280)])
+        self.driver.swipe(190,590,0,-400)
+        self.driver.tap([(300, 570)])
         sleep(1)
-        self.gift_butten = self.driver.find_element_by_accessibility_id('icon gift')
-        self.gift_butten.click()
-        sleep(1)
-        self.stroe_butten = self.driver.find_element_by_accessibility_id('儲值')
-        self.stroe_butten.click()
-        self.stroe_title = self.driver.find_element_by_accessibility_id('儲值中心')
-
-
+        function.gift_stroe_center(self)
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)

@@ -8,6 +8,8 @@ import sys
 sys.path.append("../../../../../import")
 import setup
 import element
+sys.path.append("../function")
+import function
 from random import randint
 from appium import webdriver
 from time import sleep
@@ -19,19 +21,11 @@ class SimpleIOSTests(unittest.TestCase):
         setup.load_for5(self)
         setup.ck_login_ordinary(self)
 
-    def test_popular_imfollow_case1(self):  #粉絲數量立即變化
+    def test_popular_gift_diamond_enough(self):  #送禮時，正確扣除鑽石數量
 
         self.driver.tap([(160, 280)])
-        self.fans_value1 = self.driver.find_element_by_xpath('//XCUIElementTypeTable[1]/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[4]')
-        sum = int(self.fans_value1.get_attribute('value')) + 1
-        self.icon_follow = self.driver.find_element_by_accessibility_id('icon follow')
-        self.icon_follow.click()
         sleep(1)
-        self.fans_value2 = self.driver.find_element_by_xpath('//XCUIElementTypeTable[1]/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[4]')
-        self.assertEqual(int(sum), int(self.fans_value2.get_attribute('value')))
-
-
-
+        function.gift_diamond_enough(self)
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)
