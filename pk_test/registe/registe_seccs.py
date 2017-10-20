@@ -16,8 +16,8 @@ from time import sleep
 class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
-        # set up appium
         setup.load_for2(self)
+        setup.ck_signout(self)
         element.login_mode_element(self)
         self.icon_phone_butten.click()
         sleep(1)

@@ -8,6 +8,7 @@ import sys
 sys.path.append("../../../import")
 import setup
 import element
+import random
 from random import randint
 from appium import webdriver
 from time import sleep
@@ -16,6 +17,7 @@ class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
         setup.load_for3(self)
+        setup.ck_signout(self)
         element.login_mode_element(self)
         self.icon_phone_butten.click()
         sleep(1)
@@ -25,7 +27,10 @@ class SimpleIOSTests(unittest.TestCase):
 
     def test_userid_case6(self):
         element.registe_element(self)
-        self.user_id = 'bbbbbbbbbbbbbbbbbb'
+        self.user_id = ''
+        for i in range(20):
+            rnd = random.choice('abcdefghijklmnopqr')
+            self.user_id += rnd
         self.passwd = 'asdfgh'
         self.agn_passwd = 'asdfgh'
         self.phone_nub = '0916113899'

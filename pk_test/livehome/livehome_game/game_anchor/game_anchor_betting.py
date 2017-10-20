@@ -16,7 +16,7 @@ class SimpleIOSTests(unittest.TestCase):
         # set up appium
         setup.load_for4(self)
         setup.ck_login_anchor(self)
-        sleep(1)
+        sleep(2)
 
     def test_game_anchor_betting_case(self):
         element.livehome_element(self)
@@ -27,9 +27,11 @@ class SimpleIOSTests(unittest.TestCase):
         sleep(1)
         element.livehome_game_popular(self)
         self.livehome_game_popular_pk.click()
+        sleep(1)
         self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[5]/XCUIElementTypeTextField[1]').send_keys(1000)
         self.driver.find_element_by_accessibility_id('確定').click()
-        self.driver.find_element_by_accessibility_id('主播規範').click()
+        sleep(1)
+        self.driver.find_element_by_accessibility_id('主播規範')
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleIOSTests)

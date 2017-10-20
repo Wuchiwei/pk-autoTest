@@ -1,0 +1,6 @@
+#!/bin/bash
+python sort_game_ordinary_overage.py
+python sort_game_ordinary_betting.py
+python sort_game_ordinary_betting_short.py
+python sort_game_ordinary_store.py
+python sort_game_ordinary_pkrecord.py

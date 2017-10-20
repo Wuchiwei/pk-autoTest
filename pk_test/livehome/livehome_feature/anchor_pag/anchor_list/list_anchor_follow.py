@@ -8,6 +8,8 @@ import sys
 sys.path.append("../../../../../import")
 import setup
 import element
+sys.path.append("../function")
+import function
 from random import randint
 from appium import webdriver
 from time import sleep
@@ -19,18 +21,19 @@ class SimpleIOSTests(unittest.TestCase):
         setup.load_for5(self)
         setup.ck_login_ordinary(self)
 
-    def test_popular_follow_case2(self):  #粉絲數量變化
-
-        self.driver.tap([(160, 280)])
+    def test_list_follow_case3(self):  #粉絲數量變化
+        self.driver.swipe(190,590,0,-400)
+        self.driver.tap([(300, 570)])
         self.fans_value1 = self.driver.find_element_by_xpath('//XCUIElementTypeTable[1]/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[4]')
         sum = int(self.fans_value1.get_attribute('value')) + 1
         self.icon_follow = self.driver.find_element_by_accessibility_id('icon follow')
         self.icon_follow.click()
         self.icon_close = self.driver.find_element_by_accessibility_id('icon close')
         self.icon_close.click()
-        self.driver.swipe(start_x=45, start_y=240, end_x=45, end_y=400, duration=800) #刷新
-        sleep(2)
-        self.driver.tap([(160, 280)])
+        self.driver.swipe(190,100,0,600)
+        sleep(1)
+        self.driver.swipe(190,590,0,-400)
+        self.driver.tap([(300, 570)])
         self.fans_value2 = self.driver.find_element_by_xpath('//XCUIElementTypeTable[1]/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[4]')
         self.assertEqual(int(sum), int(self.fans_value2.get_attribute('value')))
 

@@ -69,7 +69,7 @@ def load_for3(self):    #開啟appium，載入app，3層
         Confirm_butten.click()
         massage_allow = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[6]/XCUIElementTypeOther[2]/XCUIElementTypeAlert[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]')
         massage_allow.click()
-        sleep(1)
+        sleep(2)
     except:
         pass
 
@@ -103,7 +103,7 @@ def load_for4(self):    #開啟appium，載入app，4層
         Confirm_butten.click()
         massage_allow = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[6]/XCUIElementTypeOther[2]/XCUIElementTypeAlert[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]')
         massage_allow.click()
-        sleep(1)
+        sleep(2)
     except:
         pass
 
@@ -137,7 +137,7 @@ def load_for5(self):    #開啟appium，載入app，5層
         Confirm_butten.click()
         massage_allow = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[6]/XCUIElementTypeOther[2]/XCUIElementTypeAlert[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]')
         massage_allow.click()
-        sleep(1)
+        sleep(2)
     except:
         pass
 
@@ -171,7 +171,7 @@ def load_for6(self):    #開啟appium，載入app，6層
         Confirm_butten.click()
         massage_allow = self.driver.find_element_by_xpath('//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[6]/XCUIElementTypeOther[2]/XCUIElementTypeAlert[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]')
         massage_allow.click()
-        sleep(1)
+        sleep(2)
     except:
         pass
 
@@ -191,11 +191,11 @@ def ck_login_ordinary(self):   #檢查是否已經登入-普通帳號
         self.user_id_test.send_keys(self.user_id)
         self.user_passwd_test.send_keys(self.user_passwd)
         self.login_butten.click()
-        sleep(1)
+        sleep(2)
     except:
         pass
 
-def ck_login_anchor(self):   #檢查是否已經登入-主播帳號
+def ck_login_anchor(self):     #檢查是否已經登入-主播帳號
     try:
         icon_phone_butten = self.driver.find_element_by_accessibility_id('icon phone')
         icon_phone_butten.click()
@@ -211,6 +211,17 @@ def ck_login_anchor(self):   #檢查是否已經登入-主播帳號
         self.user_id_test.send_keys(self.user_id)
         self.user_passwd_test.send_keys(self.user_passwd)
         self.login_butten.click()
-        sleep(1)
+        sleep(2)
+    except:
+        pass
+
+def ck_signout(self):   #檢查是否已經登出
+    try:
+        self.info_butten = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTabBar[1]/XCUIElementTypeButton[4]')
+        self.info_butten.click()
+        sleep(2)
+        self.signout = self.driver.find_element_by_accessibility_id('登出')
+        self.signout.click()
+        sleep(2)
     except:
         pass

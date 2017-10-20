@@ -16,6 +16,7 @@ class SimpleIOSTests(unittest.TestCase):
 
     def setUp(self):
         setup.load_for3(self)
+        setup.ck_signout(self)
         element.login_mode_element(self)
         self.icon_phone_butten.click()
         sleep(1)
