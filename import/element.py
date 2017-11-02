@@ -93,8 +93,8 @@ def my_follow(self): #我的追蹤頁面元件
 def other_set(self): #我的追蹤頁面元件
     self.other_set_title = self.driver.find_element_by_accessibility_id('其他設定')
     self.pk_record_back = self.driver.find_element_by_accessibility_id('Back')
-    self.multiple_devices = self.driver.find_element_by_accessibility_id('允許多裝置同時登入')
-    self.receive = self.driver.find_element_by_accessibility_id('願意收到所有關於PK Live的通知')
+    self.multiple_devices = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[1]/XCUIElementTypeSwitch[1]')
+    self.receive = self.driver.find_element_by_xpath('//XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeSwitch[1]')
     self.problem_butten = self.driver.find_element_by_accessibility_id('常見問題')
     self.call_me_butten = self.driver.find_element_by_accessibility_id('聯絡我們')
     self.serve_butten = self.driver.find_element_by_accessibility_id('服務條款')
