@@ -97,6 +97,7 @@
 ![avatar](https://i.imgur.com/huX4SJP.png)
 
 3. 輸入資訊如下:
+
 以下幾個是主要需要的參數，從表單裡可以依照需求輸入不一樣的資訊，當然也可以從[這裡](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md)參考更多能輸入的參數
 
 iOS app 位置 
