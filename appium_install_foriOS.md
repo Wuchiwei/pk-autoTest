@@ -24,7 +24,7 @@
 
 ##### 2. 安裝完成後，打開 xcode 找到模擬器版本
 
-* STEP 1. 開啟 xcode 第一份專案並確認模擬器可以成功開啟
+* STEP 1. 開啟 Xcode 第一份專案並確認模擬器可以成功開啟
 
 ![avatar](https://i.imgur.com/VPIlswI.png)
 
@@ -49,7 +49,7 @@
 
 * 2. 若尚未安裝，在終端機輸入以下指令下載 Homebrew
 
-```javascript
+```
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
@@ -64,7 +64,7 @@
 ```
 ### Install Appium
 
-前置作業完成後，現在可以開始下載 appium ，以及下載後續會使用 python 語法來撰寫腳本的 appium - Python - Client 資源。
+前置作業完成後，現在可以開始下載 appium 。
 
 ##### 1. 到 [appium 官網](http://appium.io/)下載 appium
 
@@ -94,7 +94,7 @@
 
 2. 點擊右上角放大鏡輸入資訊已取得 iOS app 元件名稱
 
-![avatar](https://i.imgur.com/KJGClSm.png)
+![avatar](https://i.imgur.com/huX4SJP.png)
 
 3. 輸入資訊如下:
 
@@ -115,13 +115,15 @@ iOS app 位置
 ```
 手機型號
 
+![avatar](https://i.imgur.com/ELa7NEB.png)
+
 ```
    "deviceName": "iPhone 6"
 ```
 
 ![avatar](https://i.imgur.com/scY3UuY.png)
 
-可以從[這裡](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md)參考更多能輸入的規格
+可以從[這裡](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md)參考更多能輸入的參數
 
 4. 輸入完畢後，點擊右下角 Start Session
 
