@@ -1,31 +1,66 @@
-## 在macOS10.13，使用appium1.7.1版取得app控制元件
+## 在 macOS 10.13 ，使用 appium 1.7.1 版取得  iOS app 元件名稱
+
+這篇文章主要是針對在 macOS 10.13 環境下，使用 appium 官方網站的自動化測試套件來取得需要測試的 iOS app 元件名稱，最後結合 python 語法來撰寫自動化測試腳本。
+
+
+ 接著會依照以下幾個步驟來架設好 appium 的環境
 
  * Install Xcode
  * Install Homebrew
  * Install Appium
- * 使用appium取得app元件
+ * 使用 appium 取得 iOS app 元件
  * 參考資料
 
+##### 確認在 macOS 10.13 環境底下
+
+![avatar](https://i.imgur.com/xkygLQN.png)
+
 ##### Install Xcode
-1.在終端機輸入以下指令，檢查電腦是否已經存在Xcode
+
+自動腳本的測試可以在 iOS 模擬器，也可以直接在實體機上面執行。
+
+這邊為了能夠順利在 iOS 模擬器上，所以需要使用 Xcode 所提供的 simulator 來執行動作。
+
+1. 在終端機輸入以下指令，檢查電腦是否已經存在 Xcode
 ```javascript
     xcodebulid -version
 ```
 
-2.若尚未安裝，請至[apple官網](https://developer.apple.com/xcode/)下載安裝
+![avatar](https://i.imgur.com/Yu8ddRo.png)
 
-3.安裝完成後，請打開xcod～～～～～～檢查模擬氣版本
+2. 若尚未安裝，請至 App Store 搜尋 Xcode 並下載
+
+
+3. 安裝完成後，打開 xcode 找到模擬器版本
+
+STEP 1. 開啟 xcode 第一份專案並確認模擬器可以成功開啟
+
+![avatar](https://i.imgur.com/VPIlswI.png)
+
+![avatar](https://i.imgur.com/TNtVWA9.png)
+
+STEP 2. 尋找模擬器其他可用版本，後續設定 appium 參數時會使用到
+
+在 Xcode -> Preferences ，表單出現後點擊上方工具列的 Components 即可看到其他可用版本
+
+![avatar](https://i.imgur.com/mvGEqsG.png)
 
 ##### Install Homebrew
-1.在終端機輸入以下指令，確認電腦是否已經存在Homebrew
+
+這個是方便用來管理 Mac 中的套件下載以及卸載的工具，後面會用這個工具來下載相關的套件。
+
+1. 在終端機輸入以下指令，先確認電腦是否已經存在 Homebrew
 ```javascript
     brew -v
 ```
-2.若尚未安裝，在終端機輸入以下指令下載Homebrew
+![avatar](https://i.imgur.com/Ql7mwrn.png)
+
+2. 若尚未安裝，在終端機輸入以下指令下載 Homebrew
 ```javascript
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-3.在終端機中分別輸入以下兩個指令更新Homebrew
+
+3. 在終端機中分別輸入以下兩個指令更新 Homebrew
 ```javascript
     brew update
 ```
@@ -33,9 +68,14 @@
     brew install carthage
 ```
 ##### Install Appium
-1.到[appium官網](http://appium.io/)下載appium
 
-2.安裝完成後，在終端機分別輸入以下指令
+前置作業完成後，現在可以開始下載 appium ，以及下載後續會使用 python 語法來撰寫腳本的 appium - Python - Client 資源。
+
+1. 到 [appium 官網](http://appium.io/)下載 appium
+
+![avatar](https://i.imgur.com/8BNRuQM.png)
+
+2. 安裝完成後，在終端機分別輸入以下指令
 ```javascript
     brew install node
 ```
@@ -45,7 +85,7 @@
 ```javascript
     npm install wd
 ```
-3.安裝appium-Python-Client
+3. 安裝 appium - Python - Client
 ```javascript
     sudo easy_install pip
 ```
@@ -53,14 +93,21 @@
     sudo pip install Appium-Python-Client
 ```
 
-##### 使用appium取得app元件
-1.開啟自官方下載的appium，並點擊start
+##### 使用 appium 取得 iOS app 元件
 
-2.點擊右上角放大鏡輸入資訊已取得app元件名稱
+到這裡可以開始使用 appium 來取得 iOS app 的元件
+
+1.開啟自官方下載的 appium，並點擊 start
+
+![avatar](https://i.imgur.com/nobxzix.png)
+
+2.點擊右上角放大鏡輸入資訊已取得 iOS app 元件名稱
+
+![avatar](https://i.imgur.com/KJGClSm.png)
 
 3.輸入資訊如下:
 
-app位置
+iOS app 位置
 ```javascript
     "app": 檔案路徑
 ```
@@ -77,17 +124,22 @@ app位置
    "deviceName": "iPhone 6"
 ```
 
+![avatar](https://i.imgur.com/scY3UuY.png)
+
 可以從[這裡](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md)參考更多能輸入的規格
 
-4.輸入完畢後，點擊右下角Start Session
+4.輸入完畢後，點擊右下角 Start Session
 
-5.取得元件名稱後，即可開始使用python語法撰寫第一份自動化測試腳本
+![avatar](https://i.imgur.com/v5STwkB.png)
+
+5.取得元件名稱後，即可開始使用 python 語法撰寫第一份自動化測試腳本
+
 
 
 
 ##### 參考資料
 若有其餘相關問題也能參考以下兩個位置資訊
 
-1.youtube[教學影片](https://www.youtube.com/watch?v=IKOXr095jtM)
+1.youtube [教學影片](https://www.youtube.com/watch?v=IKOXr095jtM)
 
 2.[部落格](https://tracydeng.github.io/2017/02/appium-install/)
