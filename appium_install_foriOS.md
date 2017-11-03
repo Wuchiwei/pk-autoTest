@@ -1,9 +1,6 @@
 # 在 macOS 10.13 ，使用 appium 1.7.1 版取得  iOS app 元件名稱
 
-這篇文章主要是針對在 macOS 10.13 環境下，使用 appium 官方網站的自動化測試套件來取得需要測試的 iOS app 元件名稱，
-//TODO: 你的文章內容沒寫到 python 語法，是漏寫了，還是這段打錯了？
-最後結合 python 語法來撰寫自動化測試腳本。
-
+這篇文章主要是針對在 macOS 10.13 環境下，使用 appium 官方網站的自動化測試套件來取得需要測試的 iOS app 元件名稱。
 
  接著會依照以下幾個步驟來架設好 appium 的環境
 
@@ -23,18 +20,9 @@
 
 這邊選擇在 iOS 模擬器上執行，使用 Xcode 所提供的 simulator 來執行動作。
 
-##### 1. 在終端機輸入以下指令，檢查電腦是否已經存在 Xcode
-//TODO: 為什麼 需要加上 javascript，還有這行指令有機會會失敗，建議請使用者在 app store 搜尋 xcode 的方式來確認
-```javascript
-    xcodebulid -version
-```
+##### 1. 請至 App Store 搜尋 Xcode 確認使否已經存在，若沒有請直接下載
 
-![avatar](https://i.imgur.com/Yu8ddRo.png)
-
-##### 2. 若尚未安裝，請至 App Store 搜尋 Xcode 並下載
-
-
-##### 3. 安裝完成後，打開 xcode 找到模擬器版本
+##### 2. 安裝完成後，打開 xcode 找到模擬器版本
 
 * STEP 1. 開啟 xcode 第一份專案並確認模擬器可以成功開啟
 
@@ -52,26 +40,26 @@
 
 這個是方便用來管理 Mac 中的套件下載以及卸載的工具，後面會用這個工具來下載相關的套件。
 
-//TODO: 為什麼 需要加上 javascript
+
 * 1. 在終端機輸入以下指令，先確認電腦是否已經存在 Homebrew
-```javascript
+```
     brew -v
 ```
 ![avatar](https://i.imgur.com/Ql7mwrn.png)
 
 * 2. 若尚未安裝，在終端機輸入以下指令下載 Homebrew
-//TODO: 為什麼 需要加上 javascript
+
 ```javascript
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 * 3. 在終端機中分別輸入以下兩個指令更新 Homebrew
-//TODO: 為什麼 需要加上 javascript
-```javascript
+
+```
     brew update
 ```
-//TODO: 為什麼 需要加上 javascript
-```javascript
+
+```
     brew install carthage
 ```
 ### Install Appium
@@ -83,27 +71,17 @@
 ![avatar](https://i.imgur.com/8BNRuQM.png)
 
 ##### 2. 安裝完成後，在終端機分別輸入以下指令
-//TODO: 為什麼 需要加上 javascript
-```javascript
+
+```
     brew install node
 ```
-//TODO: 為什麼 需要加上 javascript
-```javascript
+
+```
     npm install -g appium
 ```
-//TODO: 為什麼 需要加上 javascript
-```javascript
+
+```
     npm install wd
-```
-//TODO: 這次有需要裝 Python 嗎？
-##### 3. 安裝 appium - Python - Client
-//TODO: 為什麼 需要加上 javascript
-```javascript
-    sudo easy_install pip
-```
-//TODO: 為什麼 需要加上 javascript
-```javascript
-    sudo pip install Appium-Python-Client
 ```
 
 ### 使用 appium 取得 iOS app 元件
@@ -121,23 +99,23 @@
 3. 輸入資訊如下:
 
 iOS app 位置
-//TODO: 為什麼 需要加上 javascript
-```javascript
+
+```
     "app": 檔案路徑
 ```
 版本（必須輸入模擬器裡面具有的版本才能使用）
-//TODO: 為什麼 需要加上 javascript
-```javascript
+
+```
     "platformVersion": "11.0"
 ```
 平台名稱
-//TODO: 為什麼 需要加上 javascript
-```javascript
+
+```
    "platformName": "iOS"
 ```
 手機型號
-//TODO: 為什麼 需要加上 javascript
-```javascript
+
+```
    "deviceName": "iPhone 6"
 ```
 
@@ -151,10 +129,8 @@ iOS app 位置
 
 5. 取得元件名稱後，即可開始撰寫第一份自動化測試腳本。
 
-
-
-
 ##### 參考資料
+
 若有其餘相關問題也能參考以下兩個位置資訊
 
 1.youtube [教學影片](https://www.youtube.com/watch?v=IKOXr095jtM)
